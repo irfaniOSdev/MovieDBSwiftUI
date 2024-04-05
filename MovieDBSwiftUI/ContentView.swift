@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import MDNetworkManager
 
 struct ContentView: View {
+  let networkManager = MDNetworkManager()
     var body: some View {
         VStack {
             Image(systemName: "globe")

@@ -11,14 +11,31 @@
 		BCF46D612BBDEA86004E53DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46D602BBDEA86004E53DD /* ContentView.swift */; };
 		BCF46D632BBDEA88004E53DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF46D622BBDEA88004E53DD /* Assets.xcassets */; };
 		BCF46D662BBDEA88004E53DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF46D652BBDEA88004E53DD /* Preview Assets.xcassets */; };
+		ECDF129A7E2FE62DD9A2E3B7 /* Pods_MovieDBSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145170DA522C0AFA53229E5D /* Pods_MovieDBSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BCF46DB12BBDF77E004E53DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		145170DA522C0AFA53229E5D /* Pods_MovieDBSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDBSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737057A499543C7F527B8564 /* Pods-MovieDBSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MovieDBSwiftUI/Pods-MovieDBSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		BCF46D5B2BBDEA86004E53DD /* MovieDBSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF46D5E2BBDEA86004E53DD /* MovieDBSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBSwiftUIApp.swift; sourceTree = "<group>"; };
 		BCF46D602BBDEA86004E53DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BCF46D622BBDEA88004E53DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCF46D652BBDEA88004E53DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F743737FFDB4EBBE391E4C92 /* Pods-MovieDBSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MovieDBSwiftUI/Pods-MovieDBSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDF129A7E2FE62DD9A2E3B7 /* Pods_MovieDBSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7258728867B47B7BFD85FA61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				737057A499543C7F527B8564 /* Pods-MovieDBSwiftUI.debug.xcconfig */,
+				F743737FFDB4EBBE391E4C92 /* Pods-MovieDBSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F2FCAC0DC923FFBE984E1E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				145170DA522C0AFA53229E5D /* Pods_MovieDBSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCF46D522BBDEA86004E53DD = {
 			isa = PBXGroup;
 			children = (
 				BCF46D5D2BBDEA86004E53DD /* MovieDBSwiftUI */,
 				BCF46D5C2BBDEA86004E53DD /* Products */,
+				7258728867B47B7BFD85FA61 /* Pods */,
+				8F2FCAC0DC923FFBE984E1E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCF46D692BBDEA88004E53DD /* Build configuration list for PBXNativeTarget "MovieDBSwiftUI" */;
 			buildPhases = (
+				23EE278221FCCD421C3F9F45 /* [CP] Check Pods Manifest.lock */,
 				BCF46D572BBDEA86004E53DD /* Sources */,
 				BCF46D582BBDEA86004E53DD /* Frameworks */,
 				BCF46D592BBDEA86004E53DD /* Resources */,
+				BCF46DB12BBDF77E004E53DD /* Embed Frameworks */,
+				026A979C800F884CAABDF514 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +171,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		026A979C800F884CAABDF514 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieDBSwiftUI/Pods-MovieDBSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieDBSwiftUI/Pods-MovieDBSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieDBSwiftUI/Pods-MovieDBSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23EE278221FCCD421C3F9F45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieDBSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCF46D572BBDEA86004E53DD /* Sources */ = {
@@ -266,6 +348,7 @@
 		};
 		BCF46D6A2BBDEA88004E53DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 737057A499543C7F527B8564 /* Pods-MovieDBSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -273,6 +356,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MovieDBSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MovieDBSwiftUI",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -294,6 +382,7 @@
 		};
 		BCF46D6B2BBDEA88004E53DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F743737FFDB4EBBE391E4C92 /* Pods-MovieDBSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +390,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MovieDBSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MovieDBSwiftUI",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

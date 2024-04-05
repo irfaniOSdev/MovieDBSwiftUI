@@ -1,0 +1,16 @@
+PODS:
+  - MDNetworkManager (1.0.0)
+
+DEPENDENCIES:
+  - MDNetworkManager (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - MDNetworkManager
+
+SPEC CHECKSUMS:
+  MDNetworkManager: 470e0fe75e0764b21e8f8f5659817d291c2f5762
+
+PODFILE CHECKSUM: 6ccb42dd6de7065e47ba3c98db0eac61faef2906
+
+COCOAPODS: 1.13.0

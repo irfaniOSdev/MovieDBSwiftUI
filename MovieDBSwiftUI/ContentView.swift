@@ -6,19 +6,25 @@
 //
 
 import SwiftUI
-import MDNetworkManager
 
 struct ContentView: View {
-  let networkManager = MDNetworkManager()
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+  @StateObject var router = Router()
+
+  var body: some View {
+
+    NavigationView {
+      Group {
+        if router.currentDestination == .showDetail {
+          ShowDetailView()
+        } else if router.currentDestination == .seasonDetail {
+          SeasonDetailView()
         }
-        .padding()
+      }
+      .navigationTitle("App")
+      .environmentObject(router)
     }
+  }
 }
 
 #Preview {

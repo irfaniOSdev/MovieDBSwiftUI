@@ -6,7 +6,7 @@ target 'MovieDBSwiftUI' do
   use_frameworks!
 
   # Pods for MovieDBSwiftUI
-  pod 'MDNetworkManager', '~> 1.0'
+  pod 'MDNetworkManager'
 
 
   post_install do |installer|

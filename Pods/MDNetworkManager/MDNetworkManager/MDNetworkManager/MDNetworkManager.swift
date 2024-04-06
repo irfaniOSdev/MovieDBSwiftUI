@@ -16,20 +16,26 @@ public enum HTTPMethod: String {
     // Add other HTTP methods as needed
 }
 
-protocol NetworkServiceProtocol {
-  func fetchData<T: Decodable>(from url: URL, method: HTTPMethod, parameters: [String: Any]?) -> AnyPublisher<T, Error>
+public protocol NetworkServiceProtocol {
+  func fetchData<T: Decodable>(from url: URL, method: HTTPMethod, headers: [String: String]?, parameters: [String: Any]?) -> AnyPublisher<T, Error>
 }
 
 public class MDNetworkManager: NetworkServiceProtocol {
     private let session: URLSession
 
-  public init(session: URLSession = .shared) {
+    public init(session: URLSession = .shared) {
         self.session = session
     }
 
-  public  func fetchData<T: Decodable>(from url: URL, method: HTTPMethod = .GET, parameters: [String: Any]? = nil) -> AnyPublisher<T, Error> {
+    public func fetchData<T: Decodable>(from url: URL, method: HTTPMethod = .GET, headers: [String: String]? = nil, parameters: [String: Any]? = nil) -> AnyPublisher<T, Error> {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+
+        if let headers = headers {
+            for (key, value) in headers {
+                request.setValue(value, forHTTPHeaderField: key)
+            }
+        }
 
         if let parameters = parameters {
             if method == .GET {
@@ -43,8 +49,23 @@ public class MDNetworkManager: NetworkServiceProtocol {
         }
 
         return session.dataTaskPublisher(for: request)
-            .map { $0.data }
+            .tryMap { data, response -> Data in
+                guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
+                    throw URLError(.badServerResponse)
+                }
+                return data
+            }
             .decode(type: T.self, decoder: JSONDecoder())
+            .mapError { error -> Error in
+                if let urlError = error as? URLError, urlError.code == .notConnectedToInternet {
+                    return NetworkError.noInternetConnection
+                }
+                return error
+            }
             .eraseToAnyPublisher()
     }
+}
+
+public enum NetworkError: Error {
+    case noInternetConnection
 }

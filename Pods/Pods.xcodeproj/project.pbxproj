@@ -360,6 +360,43 @@
 			};
 			name = Release;
 		};
+		5797BCF2CA37CA15A33148AE7709EA71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D0994EBA32FF6E77D04C01ED235857 /* MDNetworkManager.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MDNetworkManager/MDNetworkManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MDNetworkManager/MDNetworkManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MDNetworkManager/MDNetworkManager.modulemap";
+				PRODUCT_MODULE_NAME = MDNetworkManager;
+				PRODUCT_NAME = MDNetworkManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5D911C2965255B7ABE04FEB024C3E239 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDD4E0042AD6274F8C2D87E5FACF0F67 /* Pods-MovieDBSwiftUI.release.xcconfig */;
@@ -437,7 +474,7 @@
 			};
 			name = Debug;
 		};
-		93A66D4259E36ACD3621EC6A2CB9E5D4 /* Debug */ = {
+		8A47D24EE8B605B1261B91980D8AD9AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 406321F82D864D7A6D98742F3409672F /* MDNetworkManager.debug.xcconfig */;
 			buildSettings = {
@@ -472,43 +509,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		BACDBF0173601942B2484A8B2B59887F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5D0994EBA32FF6E77D04C01ED235857 /* MDNetworkManager.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGNING_ALLOWED = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MDNetworkManager/MDNetworkManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MDNetworkManager/MDNetworkManager-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MDNetworkManager/MDNetworkManager.modulemap";
-				PRODUCT_MODULE_NAME = MDNetworkManager;
-				PRODUCT_NAME = MDNetworkManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -591,8 +591,8 @@
 		7F854511C5CC48037113ADEEC3AA9B74 /* Build configuration list for PBXNativeTarget "MDNetworkManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93A66D4259E36ACD3621EC6A2CB9E5D4 /* Debug */,
-				BACDBF0173601942B2484A8B2B59887F /* Release */,
+				8A47D24EE8B605B1261B91980D8AD9AF /* Debug */,
+				5797BCF2CA37CA15A33148AE7709EA71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

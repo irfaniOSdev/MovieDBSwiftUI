@@ -19,6 +19,14 @@
 		BCD14DFE2BC14F1F00D884B7 /* SeasonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14DFD2BC14F1F00D884B7 /* SeasonDetailViewModel.swift */; };
 		BCD14E012BC14F8100D884B7 /* SeasonDetailCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E002BC14F8100D884B7 /* SeasonDetailCodable.swift */; };
 		BCD14E042BC1511000D884B7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E032BC1511000D884B7 /* Router.swift */; };
+		BCD14E082BC21A9B00D884B7 /* SeasonListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E072BC21A9B00D884B7 /* SeasonListService.swift */; };
+		BCD14E0B2BC21B6800D884B7 /* SeasonListCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E0A2BC21B6800D884B7 /* SeasonListCodable.swift */; };
+		BCD14E0E2BC21B9300D884B7 /* SeasonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E0D2BC21B9300D884B7 /* SeasonListViewModel.swift */; };
+		BCD14E112BC21C2E00D884B7 /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E102BC21C2E00D884B7 /* SeasonListView.swift */; };
+		BCD14E182BC2AF5E00D884B7 /* EpisodeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E172BC2AF5E00D884B7 /* EpisodeDetailViewModel.swift */; };
+		BCD14E1C2BC2B03A00D884B7 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E1B2BC2B03A00D884B7 /* EpisodeDetailView.swift */; };
+		BCD14E202BC2B7D900D884B7 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E1F2BC2B7D900D884B7 /* VideoPlayerView.swift */; };
+		BCD14E232BC2BDFA00D884B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14E222BC2BDFA00D884B7 /* Extensions.swift */; };
 		BCF46D5F2BBDEA86004E53DD /* MovieDBSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46D5E2BBDEA86004E53DD /* MovieDBSwiftUIApp.swift */; };
 		BCF46D612BBDEA86004E53DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46D602BBDEA86004E53DD /* ContentView.swift */; };
 		BCF46D632BBDEA88004E53DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF46D622BBDEA88004E53DD /* Assets.xcassets */; };
@@ -55,6 +63,14 @@
 		BCD14DFD2BC14F1F00D884B7 /* SeasonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetailViewModel.swift; sourceTree = "<group>"; };
 		BCD14E002BC14F8100D884B7 /* SeasonDetailCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetailCodable.swift; sourceTree = "<group>"; };
 		BCD14E032BC1511000D884B7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BCD14E072BC21A9B00D884B7 /* SeasonListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListService.swift; sourceTree = "<group>"; };
+		BCD14E0A2BC21B6800D884B7 /* SeasonListCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListCodable.swift; sourceTree = "<group>"; };
+		BCD14E0D2BC21B9300D884B7 /* SeasonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListViewModel.swift; sourceTree = "<group>"; };
+		BCD14E102BC21C2E00D884B7 /* SeasonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListView.swift; sourceTree = "<group>"; };
+		BCD14E172BC2AF5E00D884B7 /* EpisodeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewModel.swift; sourceTree = "<group>"; };
+		BCD14E1B2BC2B03A00D884B7 /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailView.swift; sourceTree = "<group>"; };
+		BCD14E1F2BC2B7D900D884B7 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		BCD14E222BC2BDFA00D884B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCF46D5B2BBDEA86004E53DD /* MovieDBSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF46D5E2BBDEA86004E53DD /* MovieDBSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBSwiftUIApp.swift; sourceTree = "<group>"; };
 		BCF46D602BBDEA86004E53DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +210,90 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		BCD14E052BC21A7200D884B7 /* SeasonList */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E0F2BC21C2100D884B7 /* View */,
+				BCD14E0C2BC21B7D00D884B7 /* ViewModel */,
+				BCD14E092BC21B5E00D884B7 /* Model */,
+				BCD14E062BC21A8C00D884B7 /* Service */,
+			);
+			path = SeasonList;
+			sourceTree = "<group>";
+		};
+		BCD14E062BC21A8C00D884B7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E072BC21A9B00D884B7 /* SeasonListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BCD14E092BC21B5E00D884B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E0A2BC21B6800D884B7 /* SeasonListCodable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCD14E0C2BC21B7D00D884B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E0D2BC21B9300D884B7 /* SeasonListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BCD14E0F2BC21C2100D884B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E102BC21C2E00D884B7 /* SeasonListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCD14E122BC2AE8E00D884B7 /* EpisodeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E1A2BC2B02700D884B7 /* View */,
+				BCD14E162BC2AF3800D884B7 /* ViewModel */,
+			);
+			path = EpisodeDetail;
+			sourceTree = "<group>";
+		};
+		BCD14E162BC2AF3800D884B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E172BC2AF5E00D884B7 /* EpisodeDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BCD14E1A2BC2B02700D884B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E1B2BC2B03A00D884B7 /* EpisodeDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCD14E1E2BC2B7B800D884B7 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E1F2BC2B7D900D884B7 /* VideoPlayerView.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		BCD14E212BC2BDEF00D884B7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCD14E222BC2BDFA00D884B7 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BCF46D522BBDEA86004E53DD = {
 			isa = PBXGroup;
 			children = (
@@ -219,9 +319,13 @@
 				BCF46D5E2BBDEA86004E53DD /* MovieDBSwiftUIApp.swift */,
 				BCF46D602BBDEA86004E53DD /* ContentView.swift */,
 				BCD14DEB2BC13F7C00D884B7 /* Constants.swift */,
+				BCD14E212BC2BDEF00D884B7 /* Helpers */,
 				BCF46D642BBDEA88004E53DD /* Preview Content */,
-				BCD14E022BC1510100D884B7 /* Router */,
+				BCD14E1E2BC2B7B800D884B7 /* VideoPlayer */,
 				BCD14DF52BC1491700D884B7 /* Network */,
+				BCD14E022BC1510100D884B7 /* Router */,
+				BCD14E122BC2AE8E00D884B7 /* EpisodeDetail */,
+				BCD14E052BC21A7200D884B7 /* SeasonList */,
 				BCD14DF12BC148BA00D884B7 /* SeasonDetail */,
 				BCD14DE32BC090FD00D884B7 /* ShowDetail */,
 			);
@@ -352,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD14DEA2BC09B0B00D884B7 /* ShowDetailView.swift in Sources */,
+				BCD14E0B2BC21B6800D884B7 /* SeasonListCodable.swift in Sources */,
 				BCD14E012BC14F8100D884B7 /* SeasonDetailCodable.swift in Sources */,
 				BCF46D612BBDEA86004E53DD /* ContentView.swift in Sources */,
 				BCF46D5F2BBDEA86004E53DD /* MovieDBSwiftUIApp.swift in Sources */,
@@ -359,12 +464,19 @@
 				BCD14DE72BC0911F00D884B7 /* ShowDetailCodable.swift in Sources */,
 				BCD14DF72BC1493C00D884B7 /* NetworkServiceProtocol.swift in Sources */,
 				BCD14DFE2BC14F1F00D884B7 /* SeasonDetailViewModel.swift in Sources */,
+				BCD14E232BC2BDFA00D884B7 /* Extensions.swift in Sources */,
 				BCD14DF42BC1490200D884B7 /* SeasonDetailService.swift in Sources */,
+				BCD14E082BC21A9B00D884B7 /* SeasonListService.swift in Sources */,
 				BCD14DEC2BC13F7C00D884B7 /* Constants.swift in Sources */,
 				BCD14E042BC1511000D884B7 /* Router.swift in Sources */,
+				BCD14E1C2BC2B03A00D884B7 /* EpisodeDetailView.swift in Sources */,
 				BCD14DE22BC08B5000D884B7 /* EndPoint.swift in Sources */,
+				BCD14E0E2BC21B9300D884B7 /* SeasonListViewModel.swift in Sources */,
 				BCD14DE02BC08AEC00D884B7 /* ShowDetailViewModel.swift in Sources */,
 				BCD14DEF2BC13FDB00D884B7 /* ShowDetailService.swift in Sources */,
+				BCD14E112BC21C2E00D884B7 /* SeasonListView.swift in Sources */,
+				BCD14E182BC2AF5E00D884B7 /* EpisodeDetailViewModel.swift in Sources */,
+				BCD14E202BC2B7D900D884B7 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,8 +621,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,9 +631,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.irfan.MovieDBSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -544,8 +660,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,9 +670,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.irfan.MovieDBSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

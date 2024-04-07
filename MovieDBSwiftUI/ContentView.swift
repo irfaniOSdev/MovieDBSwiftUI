@@ -15,13 +15,21 @@ struct ContentView: View {
 
     NavigationView {
       Group {
-        if router.currentDestination == .showDetail {
-          ShowDetailView()
-        } else if router.currentDestination == .seasonDetail {
-          SeasonDetailView()
+        switch router.currentDestination {
+        case .seasonList:
+          SeasonListView()
+            .environmentObject(router)
+        case .showDetail(let viewModel):
+          ShowDetailView(viewModel: viewModel)
+            .environmentObject(router)
+        case .episodeDetail(let viewModel):
+          EpisodeDetailView(viewModel: viewModel)
+            .environmentObject(router)
+        case .videoPlayer:
+          VideoPlayerView()
+            .environmentObject(router)
         }
       }
-      .navigationTitle("App")
       .environmentObject(router)
     }
   }

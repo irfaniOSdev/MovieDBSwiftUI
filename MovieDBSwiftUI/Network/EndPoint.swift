@@ -8,6 +8,5 @@
 import Foundation
 
 enum EndPoint: String {
-
   case showDetail = "https://api.themoviedb.org/3/tv/%@"
 }

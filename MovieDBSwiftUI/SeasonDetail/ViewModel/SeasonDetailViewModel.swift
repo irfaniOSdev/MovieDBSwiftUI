@@ -10,17 +10,22 @@ import Combine
 
 class SeasonDetailViewModel: ObservableObject {
 
-  let service: MDServiceProtocol
+  private let service: MDServiceProtocol
+
+  @Published var episodes: [Episode]?
 
   private var cancellables = Set<AnyCancellable>()
 
-  init(service: MDServiceProtocol = SeasonDetailService(seriesId: 65701, seasonNumber: 0)){
+  init(service: MDServiceProtocol){
     self.service = service
+    self.fetchSeasonInfo()
   }
 
   func fetchSeasonInfo() {
 
-    let requestPublisher = service.requestData() as AnyPublisher<SeasonDetailCodable, Error>
+    let requestPublisher = service.requestData()
+      .receive(on: DispatchQueue.main) // Receive on the main queue
+      .eraseToAnyPublisher() as AnyPublisher<SeasonDetailCodable, Error>
 
     requestPublisher
       .sink(receiveCompletion: { completion in
@@ -31,7 +36,7 @@ class SeasonDetailViewModel: ObservableObject {
           print(error)
         }
       }, receiveValue: { model in
-          print(model)
+          self.episodes = model.episodes
       })
       .store(in: &cancellables)
   }

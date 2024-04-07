@@ -10,7 +10,7 @@ import Foundation
 struct SeasonDetailService: MDServiceProtocol {
 
   let seriesId: Int
-  let seasonNumber: Int
+  var seasonNumber: Int
 
   init(seriesId: Int, seasonNumber: Int) {
     self.seriesId = seriesId

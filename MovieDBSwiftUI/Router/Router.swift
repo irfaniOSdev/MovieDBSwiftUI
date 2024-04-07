@@ -9,19 +9,25 @@ import Foundation
 import SwiftUI
 
 enum Destination {
-    case showDetail
-    case seasonDetail
-    // Add more destinations as needed
+    case seasonList
+    case showDetail(viewModel: ShowDetailViewModel)
+    case episodeDetail(viewModel: EpisodeDetailViewModel)
+    case videoPlayer
 }
 
 class Router: ObservableObject {
-  @Published var currentDestination: Destination = .showDetail
+  @Published var currentDestination: Destination = .seasonList
+  private var navigationStack: [Destination] = []
 
   func navigate(to destination: Destination) {
+    navigationStack.append(currentDestination)
     self.currentDestination = destination
   }
 
   func back() {
-    self.currentDestination = .showDetail
+    guard let previousDestination = navigationStack.popLast() else {
+      return
+    }
+    currentDestination = previousDestination
   }
 }

@@ -10,17 +10,32 @@ import Combine
 
 class ShowDetailViewModel: ObservableObject {
 
-  let service: MDServiceProtocol
+  @Published var model: ShowDetailCodable?
+  @Published var selectedTab = 0
+  @Published var showAlert = false
+  @Published var error: Error?
+
+  private let service: MDServiceProtocol
 
   private var cancellables = Set<AnyCancellable>()
 
-  init(service: MDServiceProtocol = ShowDetailService(seriesId: 65701)) {
+  init(service: MDServiceProtocol) {
     self.service = service
+  }
+
+  func getName() -> String {
+    model?.name ?? ""
+  }
+
+  func getOverView() -> String {
+    model?.overview ?? model?.originalName ?? ""
   }
 
   func fetchShowInfo() {
 
-    let requestPublisher = service.requestData() as AnyPublisher<ShowDetailCodable, Error>
+    let requestPublisher = service.requestData()
+      .receive(on: DispatchQueue.main) // Receive on the main queue
+      .eraseToAnyPublisher() as AnyPublisher<ShowDetailCodable, Error>
 
     requestPublisher
       .sink(receiveCompletion: { completion in
@@ -29,9 +44,11 @@ class ShowDetailViewModel: ObservableObject {
           break
         case .failure(let error):
           print(error)
+          self.showAlert = true
+          self.error = error
         }
       }, receiveValue: { model in
-          print(model)
+          self.model = model
       })
       .store(in: &cancellables)
   }

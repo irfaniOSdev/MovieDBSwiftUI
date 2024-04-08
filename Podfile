@@ -8,6 +8,10 @@ target 'MovieDBSwiftUI' do
   # Pods for MovieDBSwiftUI
   pod 'MDNetworkManager'
 
+  target 'MovieDBSwiftUITests' do
+      use_frameworks!
+      inherit! :search_paths
+  end
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

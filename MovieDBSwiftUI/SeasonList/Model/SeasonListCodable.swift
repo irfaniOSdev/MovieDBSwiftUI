@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - SeasonListCodable
-struct SeasonListCodable: Codable {
+struct SeasonListCodable: Codable, Equatable {
     let page: Int?
     var results: [Series]?
     let totalPages, totalResults: Int?
@@ -22,15 +22,12 @@ struct SeasonListCodable: Codable {
 
 // MARK: - Result
 struct Series: Codable, Equatable, Identifiable {
-    let backdropPath: String?
     let id: Int
-    let originalName, overview: String?
+    let overview: String?
     let posterPath, name: String?
 
   enum CodingKeys: String, CodingKey {
-    case backdropPath = "backdrop_path"
     case id
-    case originalName = "original_name"
     case overview
     case posterPath = "poster_path"
     case name

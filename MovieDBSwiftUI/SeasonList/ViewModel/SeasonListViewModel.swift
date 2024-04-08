@@ -41,7 +41,8 @@ class SeasonListViewModel: ObservableObject {
       .eraseToAnyPublisher() as AnyPublisher<SeasonListCodable, Error>
 
     requestPublisher
-      .sink(receiveCompletion: { completion in
+      .sink(receiveCompletion: { [weak self] completion in
+        guard let self else { return }
         switch completion {
         case .finished:
           self.currentPage += 1
@@ -51,7 +52,9 @@ class SeasonListViewModel: ObservableObject {
           self.error = error
         }
         self.isLoading = false
-      }, receiveValue: { model in
+      }, receiveValue: { [weak self] model in
+        guard let self else { return }
+        self.isLoading = false
         if self.model == nil {
           self.model = model
         } else {

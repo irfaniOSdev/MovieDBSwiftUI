@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0CC1F7A9EDEDFFEE6CBDC7F /* Pods_MovieDBSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9EC052EC6D2FA619B8431A /* Pods_MovieDBSwiftUITests.framework */; };
-		BC8E961F2BC43BEC001EF458 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E961E2BC43BEC001EF458 /* MockNetworkService.swift */; };
+		BC8E961F2BC43BEC001EF458 /* SeasonListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E961E2BC43BEC001EF458 /* SeasonListViewModelTests.swift */; };
 		BC8E96212BC4570F001EF458 /* topRatedList.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8E96202BC4570F001EF458 /* topRatedList.json */; };
 		BCD14DE02BC08AEC00D884B7 /* ShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14DDF2BC08AEC00D884B7 /* ShowDetailViewModel.swift */; };
 		BCD14DE22BC08B5000D884B7 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD14DE12BC08B5000D884B7 /* EndPoint.swift */; };
@@ -67,7 +67,7 @@
 		8103C2E1A6FB421421F4B4C9 /* Pods-MovieDBSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-MovieDBSwiftUITests/Pods-MovieDBSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9739F8EB4A90EB1A0BD43038 /* Pods-MovieDBSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MovieDBSwiftUI/Pods-MovieDBSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B1BFB8A5CDE3EE8D52369185 /* Pods-MovieDBSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-MovieDBSwiftUITests/Pods-MovieDBSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BC8E961E2BC43BEC001EF458 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		BC8E961E2BC43BEC001EF458 /* SeasonListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListViewModelTests.swift; sourceTree = "<group>"; };
 		BC8E96202BC4570F001EF458 /* topRatedList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topRatedList.json; sourceTree = "<group>"; };
 		BCD14DDF2BC08AEC00D884B7 /* ShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewModel.swift; sourceTree = "<group>"; };
 		BCD14DE12BC08B5000D884B7 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -331,10 +331,18 @@
 			isa = PBXGroup;
 			children = (
 				BC8E96202BC4570F001EF458 /* topRatedList.json */,
-				BC8E961E2BC43BEC001EF458 /* MockNetworkService.swift */,
-				BCDA19882BC4778000C349C5 /* MockListSerivce.swift */,
+				BCDA198A2BC47D6E00C349C5 /* SeasonList */,
 			);
 			path = MovieDBSwiftUITests;
+			sourceTree = "<group>";
+		};
+		BCDA198A2BC47D6E00C349C5 /* SeasonList */ = {
+			isa = PBXGroup;
+			children = (
+				BC8E961E2BC43BEC001EF458 /* SeasonListViewModelTests.swift */,
+				BCDA19882BC4778000C349C5 /* MockListSerivce.swift */,
+			);
+			path = SeasonList;
 			sourceTree = "<group>";
 		};
 		BCF46D522BBDEA86004E53DD = {
@@ -368,10 +376,10 @@
 				BCD14E1E2BC2B7B800D884B7 /* VideoPlayer */,
 				BCD14DF52BC1491700D884B7 /* Network */,
 				BCD14E022BC1510100D884B7 /* Router */,
-				BCD14E122BC2AE8E00D884B7 /* EpisodeDetail */,
 				BCD14E052BC21A7200D884B7 /* SeasonList */,
-				BCD14DF12BC148BA00D884B7 /* SeasonDetail */,
 				BCD14DE32BC090FD00D884B7 /* ShowDetail */,
+				BCD14DF12BC148BA00D884B7 /* SeasonDetail */,
+				BCD14E122BC2AE8E00D884B7 /* EpisodeDetail */,
 			);
 			path = MovieDBSwiftUI;
 			sourceTree = "<group>";
@@ -553,7 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8E961F2BC43BEC001EF458 /* MockNetworkService.swift in Sources */,
+				BC8E961F2BC43BEC001EF458 /* SeasonListViewModelTests.swift in Sources */,
 				BCDA19892BC4778000C349C5 /* MockListSerivce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

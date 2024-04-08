@@ -1,5 +1,5 @@
 //
-//  MockNetworkService.swift
+//  SeasonListViewModelTests.swift
 //  MovieDBSwiftUITests
 //
 //  Created by Muhammad Irfan on 08/04/2024.
